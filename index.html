@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Для тебя ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<audio id="bgMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+    <div id="startScreen" class="card active">
+
+        <img src="assets/bear.png" class="bear">
+
+        <h1>Привет, солнышко 🌸</h1>
+
+        <p>
+            У меня есть для тебя очень важный вопрос...
+        </p>
+
+        <button onclick="startSite()">
+            Открыть 💌
+        </button>
+
+    </div>
+
+    <div id="questionScreen" class="card">
+
+        <img src="assets/photo.jpg" class="photo">
+
+        <h1>Пойдешь со мной на свидание? 💖</h1>
+
+        <div class="buttons">
+
+            <button id="yesBtn" class="yes">
+                Да 💕
+            </button>
+
+            <button id="noBtn" class="no">
+                Нет 😢
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="placeScreen" class="card">
+
+        <h1>Куда пойдем? ✨</h1>
+
+        <div class="places">
+
+            <div class="place" data-place="Кино">
+                🎬
+                <span>Кино</span>
+            </div>
+
+            <div class="place" data-place="Кафе">
+                🍰
+                <span>Кафе</span>
+            </div>
+
+            <div class="place" data-place="Кофейня">
+                ☕
+                <span>Кофейня</span>
+            </div>
+
+            <div class="place" data-place="Прогулка">
+                🌇
+                <span>Прогулка</span>
+            </div>
+
+            <div class="place" data-place="Боулинг">
+                🎳
+                <span>Боулинг</span>
+            </div>
+
+            <div class="place" data-place="Свой вариант">
+                ✨
+                <span>Свой вариант</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="dateScreen" class="card">
+
+        <h1>Когда тебе удобно? 💖</h1>
+
+        <input type="date" id="date">
+
+        <input type="time" id="time">
+
+        <input
+            type="text"
+            id="meeting"
+            placeholder="Место встречи">
+
+        <input
+            type="text"
+            id="customPlace"
+            placeholder="Свой вариант (если нужен)"
+            style="display:none">
+
+        <button onclick="sendData()">
+            Подтвердить 💌
+        </button>
+
+    </div>
+
+    <div id="successScreen" class="card">
+
+        <div class="big-heart">💖</div>
+
+        <h1>УРАААА!!!</h1>
+
+        <p>
+            Наше свидание официально
+            добавлено в календарь любви ✨
+        </p>
+
+        <div class="hug">
+            (づ｡◕‿‿◕｡)づ
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
