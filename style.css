@@ -7,19 +7,20 @@ font-family:'Nunito',sans-serif;
 
 body{
 min-height:100vh;
-background:
-linear-gradient(
+background: linear-gradient(
 135deg,
 #fff1f2,
 #ffe4e6,
 #fde2d2
 );
 
-overflow:hidden;
+overflow-x:hidden;
+overflow-y:auto;
 
 display:flex;
 justify-content:center;
-align-items:center;
+align-items:flex-start;
+padding:20px 0;
 }
 
 .container{
@@ -174,5 +175,34 @@ opacity:0;
 to{
 transform:translateY(-100px);
 opacity:1;
+}
+}
+@media (max-width: 768px){
+
+.card{
+    width:95%;
+    padding:25px;
+}
+
+h1{
+    font-size:1.5rem;
+}
+
+.photo{
+    width:140px;
+    height:140px;
+}
+
+.places{
+    grid-template-columns: 1fr 1fr;
+}
+
+button{
+    width:100%;
+    margin-top:10px;
+}
+
+.buttons{
+    height:220px;
 }
 }

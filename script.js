@@ -75,13 +75,19 @@ e.clientY-(rect.top+rect.height/2)
 
 if(distance<120){
 
+const maxX =
+window.innerWidth -
+noBtn.offsetWidth - 20;
+
+const maxY =
+window.innerHeight -
+noBtn.offsetHeight - 20;
+
 noBtn.style.left =
-Math.random()*
-(window.innerWidth-150)+"px";
+Math.random() * maxX + "px";
 
 noBtn.style.top =
-Math.random()*
-(window.innerHeight-100)+"px";
+Math.random() * maxY + "px";
 
 if(noIndex<noTexts.length-1){
 noIndex++;
